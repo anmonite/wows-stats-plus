@@ -113,6 +113,48 @@ router.get('/env', function(req, res) {
 	res.json(env);
 });
 
+// Proxy batch requests through the local server because the Wargaming API
+// does not allow cross-origin browser requests from localhost.
+function proxyWowsApi(res, path) {
+	request(process.env.WOWS_API_URL + path, function(error, response, body) {
+		if (error) {
+			return res.status(502).json({
+				status: 'error',
+				error: { message: error.message }
+			});
+		}
+
+		res.status(response.statusCode);
+		res.type('application/json');
+		return res.send(body);
+	});
+}
+
+router.get('/shipinfo', function(req, res) {
+	if (!req.query.ship_id || !/^\d+(,\d+)*$/.test(req.query.ship_id))
+		return res.sendStatus(400);
+
+	proxyWowsApi(res, '/wows/encyclopedia/ships/?application_id=' + api_key +
+		'&fields=name%2Ctier%2Ctype%2Cnation&language=en&ship_id=' +
+		encodeURIComponent(req.query.ship_id));
+});
+
+router.get('/accountlist', function(req, res) {
+	if (!req.query.search || req.query.search.length > 2000)
+		return res.sendStatus(400);
+
+	proxyWowsApi(res, '/wows/account/list/?application_id=' + api_key +
+		'&search=' + encodeURIComponent(req.query.search) + '&type=exact');
+});
+
+router.get('/claninfo', function(req, res) {
+	if (!req.query.account_id || !/^\d+(,\d+)*$/.test(req.query.account_id))
+		return res.sendStatus(400);
+
+	proxyWowsApi(res, '/wows/clans/accountinfo/?application_id=' + api_key +
+		'&account_id=' + encodeURIComponent(req.query.account_id) + '&extra=clan');
+});
+
 router.post('/path', jsonParser, function(req, res) {
 	if (req.body.path) {
 		fs.access(req.body.path + "/WorldOfWarships.exe", fs.R_OK, function (err) {

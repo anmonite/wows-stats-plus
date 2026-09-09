@@ -182,7 +182,7 @@ function get_shipinfo(idArray) {
 	sync_getenv.then ( function () {
 		var sync_getinfo = new Promise (function (resolve, reject) {
 				var idString = idArray.join('%2C');
-				var api_call = api_url + '/wows/encyclopedia/ships/?application_id=' + api_key + '&fields=name%2Ctier%2Ctype%2Cnation&language=en&ship_id=' + idString;
+				var api_call = '/api/shipinfo?ship_id=' + idString;
 				ship_info = {};
 
 				jQuery.ajax({
@@ -238,7 +238,7 @@ function getClanList(nArray) {
 
 	var sync_getAccountId = new Promise (function (resolve, reject) {
 		var nameSrings = nameList.join(',');
-		var api_call = api_url + '/wows/account/list/?application_id=' + api_key + '&search=' + encodeURIComponent(nameSrings) + '&type=exact';
+		var api_call = '/api/accountlist?search=' + encodeURIComponent(nameSrings);
 //		console.log(api_call);
 		jQuery.ajax({
 			type: 'GET',
@@ -296,7 +296,7 @@ function getClanList(nArray) {
 
 		var sync_getClanInfo = new Promise (function (resolve, reject) {
 			var accountIdSrings = idList.join('%2c');
-			var api_call = api_url + '/wows/clans/accountinfo/?application_id=' + api_key + '&account_id=' + accountIdSrings + '&extra=clan';
+			var api_call = '/api/claninfo?account_id=' + accountIdSrings;
 //			console.log(api_call);
 			jQuery.ajax({
 				type: 'GET',

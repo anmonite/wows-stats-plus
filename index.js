@@ -114,7 +114,7 @@ router.get('/env', function(req, res) {
 });
 
 // Proxy batch requests through the local server because the Wargaming API
-// does not allow cross-origin browser requests from localhost.
+// does not allow cross-origin browser requests from localhost. (currently happens only over HTTPS connection)
 function proxyWowsApi(res, path) {
 	request(process.env.WOWS_API_URL + path, function(error, response, body) {
 		if (error) {

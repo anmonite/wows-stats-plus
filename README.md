@@ -1,5 +1,5 @@
 # wows-stats-plus
-A browser app to display the matching ships/players statistics for [World of Warships](http://worldofwarships.com/) like as the xvm.
+## A browser app to display advanced statistics of the matched ships/players for [World of Warships](http://worldofwarships.com/) like as the xvm.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/anmonite/wows-stats-plus)
 [![][github-release-date-shield]][github-release-link]
@@ -29,7 +29,7 @@ Figure 3 - "Combat Power" and "PR" description.
 <img width="226" height="199" alt="PR_en" src="https://github.com/user-attachments/assets/8478875f-168d-4192-8bb5-af4c472d8bf6" />
 
 
-# Functionality
+## Functionality
 - Show stats information of all matching players and ships on the random battle(pvp).
 - Show PR(Personal rating) value.
 - Show ships list with (maybe) same order as matching list of game client
@@ -52,20 +52,20 @@ Figure 3 - "Combat Power" and "PR" description.
     (I provide JSON files to translate for Japanese, English, Chinese(zh-tw), Italian and Russian now.)
 - Support direct .wowsreplay file loading via view_chrome.bat. To use this functionality you need to drag&drop .wowsreplay file to view_chrome.bat.
 
-# Environment
+## Environment
 - OS: Windows 7(32bit/64bit) or later.
 - Web browser: Google Chrome(recommended), Vivaldi, Firefox, Microsoft Edge, and more browser which is incorporated Javascript V8 engine.
 - **CAUTION - Internet Explorer is not supported at all.**
 - **CAUTION - You need set using web cookie functionality on your browser.**
 
-# Requirement
+## Requirement
 You agree that statistics of a player does NOT mean how a player will perform in a game, and you will NOT use this tool in any way to create a toxic environment or demonstrate any unethical/immortal behaviour in World of Warships.
 
 **If you do NOT agree, you shall NOT use this app.**
 
 [Node.js](https://nodejs.org/en/)
 
-# Installation
+## Installation
 1. Make sure you have [Node.js](https://nodejs.org/en/) installed, and you have restarted your computer if you just ran the installation.
 2. Make sure you have `replay` enabled in World of Warships.
 3. Clone this repo.
@@ -83,16 +83,16 @@ You agree that statistics of a player does NOT mean how a player will perform in
     * Click on `Validate` to make sure the `Application ID` you placed works.
 10. Click on `Save`. If everything goes through, the installation page will becomes an blank page.
 
-# Usage
+## Usage
 1. Run `run.bat` to start the app on your browser. Or run `run_chrome.bat` for only Google Chrome with independent window mode (without menu bar, status bar and so on). And also run `run_vivaldi.bat` for only Vivaldi. If you need, run `run_nocapture.bat` to start the app without screen capture functionality.
 2. You should see a web page open on `http://localhost:8080` , make sure only one web page to that address is open at all time. Or you can open web page on `http://(IP address of your PC):8080` from the other device via local or internet(need DMZ settings on your home router) network.
 3. If you want to see old matching list from `.wowsreplay` file, you need to drag&drop .wowsreplay file to `view_chrome.bat` via file explorer.
 
-# Need cooperation
+## Need cooperation
 Because of my poor linguistic ability, anyone please touch up translate text for English and Russian with editing lang_en.json/lang_ru.json file under "static/js/language/".
 And also anyone please try to create new JSON files for the other language(Thai(th), and more!) by modifying from lang_ja.json. 
 
-# Acknowledgements
+## Acknowledgements
 - Original wows-stats [tianweiliu](https://github.com/tianweiliu/wows-stats)
 - Zh-tw translation support [AaronChern](https://github.com/AaronChern)
 - It translation support [MightyWizard83](https://github.com/MightyWizard83)

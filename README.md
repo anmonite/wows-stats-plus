@@ -1,6 +1,16 @@
 # wows-stats-plus
 A browser app to display the matching ships/players statistics for [World of Warships](http://worldofwarships.com/) like as the xvm.
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/anmonite/wows-stats-plus)
+[![][github-release-date-shield]][github-release-link]
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/anmonite/wows-stats-plus/total)
+![GitHub License](https://img.shields.io/github/license/anmonite/wows-stats-plus)
+![GitHub Repo stars](https://img.shields.io/github/stars/anmonite/wows-stats-plus)
+
+
+[github-release-link]: https://github.com/anmonite/wows-stats-plus/releases
+[github-release-date-shield]: https://img.shields.io/github/release-date/anmonite/wows-stats-plus?display_date=published_at
+[github-downloads-link]: https://github.com/anmonite/wows-stats-plus/releases
 
 Figure 1 - Main window.
 

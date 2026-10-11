@@ -1,15 +1,23 @@
 # wows-stats-plus
-A [XVM](http://www.modxvm.com/en/) like statistics engine for [World of Warships](http://worldofwarships.com/)
+A browser app to display the matching ships/players statistics for [World of Warships](http://worldofwarships.com/) like as the xvm.
 
 
 Figure 1 - Main window.
 
-![Screenshot](https://i.gyazo.com/053817caebc694609ecf4eb781228216.png)
+<img width="1582" height="856" alt="7bdfac2e84e7690db9ebfb5217e43963" src="https://github.com/user-attachments/assets/6af76f3d-733f-4ac4-8df5-fb26b3931d38" />
 
 
 Figure 2 - Settings window.
 
-![Screenshot2](https://i.gyazo.com/eaf22c9980fa879ffc4fa4776982c763.png)
+<img width="332" height="647" alt="6762eae37f78fe343b42f6bbc1ac653b" src="https://github.com/user-attachments/assets/8660c146-f245-48d3-92f2-ca309087941b" />
+
+
+Figure 3 - "Combat Power" and "PR" description.
+
+<img width="277" height="176" alt="CP_en" src="https://github.com/user-attachments/assets/a217f9b7-1f6e-492c-96b2-b4ab933f3a67" />
+
+<img width="226" height="199" alt="PR_en" src="https://github.com/user-attachments/assets/8478875f-168d-4192-8bb5-af4c472d8bf6" />
+
 
 # Functionality
 - Show stats information of all matching players and ships on the random battle(pvp).
